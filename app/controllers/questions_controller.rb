@@ -1,10 +1,11 @@
 class QuestionsController < ApplicationController
+  ANSWERS = { message: "hi", answer: "answer" }
 
   def answer
-    @answers = []
     @message = params[:query]
     @answer = coach_answer(@message)
-    @answers << { message: @message, answer: @answer }
+    ANSWERS << { message: @message, answer: @answer }
+    @answers = ANSWERS
   end
 
   def ask
