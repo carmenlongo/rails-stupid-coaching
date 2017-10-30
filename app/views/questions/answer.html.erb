@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Answer</title>
+</head>
+
+<body>
+  <h2><% @answers.each do |a|%></h2>
+  <h2><%= a[:message] %></h2>
+  <p>- You</p>
+  <h2><%= a[:answer] %></h2>
+  <p>- Coach</p>
+  <h2><% end %></h2>
+  <h3><%= link_to "Ask a new question", ask_path %></h3>
+</body>
+</html>
